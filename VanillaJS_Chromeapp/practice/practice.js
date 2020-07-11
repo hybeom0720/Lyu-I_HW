@@ -1,18 +1,14 @@
-function sayHello(name, age)
-{
-	return `Hello ${name} you are ${age} years old`;
+const title = document.querySelector("#title");
+
+/*function handleResize(event){
+	console.log(event);
+}*/
+
+//window.addEventListener("resize",handleResize);
+
+
+function handleClick(){
+	title.style.color = 'red';
 }
 
-
-const greetNicolas = sayHello("Nicolas", 15);
-
-console.log(greetNicolas);
-
-const calculator = {
-	plus: function(a,b){
-		return a+b;
-	}
-}
-
-const plus = calculator.plus(5,5)
-console.log(plus)
+title.addEventListener("click", handleClick);
