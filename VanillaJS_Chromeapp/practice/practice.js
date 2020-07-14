@@ -1,14 +1,34 @@
 const title = document.querySelector("#title");
 
-/*function handleResize(event){
-	console.log(event);
-}*/
+const CLICKED_CLASS = "clicked";
 
-//window.addEventListener("resize",handleResize);
-
+/*function handleClick(){
+	const currentClass = title.className;
+	if (currentClass !== CLICKED_CLASS){
+		title.className = CLICKED_CLASS;
+	} else{
+		title.className = "";
+	}
+}
+*/
 
 function handleClick(){
-	title.style.color = 'red';
+	const hasClass = title.classList.contains(CLICKED_CLASS);
+	if(hasClass){
+		title.classList.remove(CLICKED_CLASS);
+	} else {
+		title.classList.add(CLICKED_CLASS);
+	}
+}
+/*
+function handleClick(){
+	title.classList.toggle("click", handleClick);
 }
 
-title.addEventListener("click", handleClick);
+ */
+function init(){
+	title.addEventListener("click", handleClick);
+}
+
+init();
+
