@@ -6,4 +6,5 @@
 - Javascript ES6(Aug.2nd Week)
 - jQuery (Aug. 2nd week)
 - FundamentalReactNodejs(Aug 3th week-Aug 4th week)
+- Inidividual Portfolio Site (Aug 4th week -)
 - Nodejs (Sep 1st Week-)
