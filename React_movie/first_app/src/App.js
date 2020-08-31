@@ -11,7 +11,6 @@ class App extends React.Component{
       //this.setState({isLaoding: false, book: true}) => ok, it is working, not error
     }, 6000);
     //Fetching the data which we want in componentDidMount part;
-    axios
   };
 
   
