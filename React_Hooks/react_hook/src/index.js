@@ -1,17 +1,43 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React, { useState } from "react";
+import ReactDOM from "react-dom";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const content = [
+    {
+        tab:"Section 1",
+        content :"I'm the content of the Section 1"
+    },
+    {
+        tab: "Section 2",
+        content : "I'm the content of the Section 2"
+    }
+];
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+const useTabs = (initialTab, allTabs) => {
+    // if(!allTabs || !Array.isArray(allTabs)){
+    //     return;
+    // }
+    const [currentIndex, setCurrentIndex] = useState(initialTab);
+    return {
+        currentItem: allTabs[currentIndex],
+        changeItem: setCurrentIndex
+    }
+};
+
+
+
+function App(){
+    const {currentItem, changeItem} = useTabs(0,content);
+    return(
+        <div className="App">
+            {content.map((section,index) => (
+            <button onClick={()=>changeItem(index)}>{section.tab}</button>
+            ))}
+            <div>
+                {currentItem.content}
+            </div>
+        </div>
+    );
+}
+
+const rootElment = document.getElementById("root");
+ReactDOM.render(<App />, rootElment);
