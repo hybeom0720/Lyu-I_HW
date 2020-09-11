@@ -1,30 +1,16 @@
 import React, { useState, useEffect, useRef} from "react";
 import ReactDOM from "react-dom";
 
-const useClick = onClick =>{
-    // if(typeof onClick !== "function"){
-    //     return;
-    // } 
-    const element = useRef();
-    useEffect(()=>{
-        if(element.current){
-            element.current.addEventListener("click", onClick);
-        }
-        return () => {
-            if (element.current) {
-            element.current.removeEventListener("click", onClick);
-            }
-        }
-    }, []);
-    return element;
+//beforeunload => Before closing the window, allow the function done.
+
+const useFadeIn = () => {
+    
 }
 
-function App(){
-    const sayHello = () => console.log("say Hello");
-    const title = useClick(sayHello);
+const App = () =>{
     return(
         <div className="App">
-            <h1 ref={title}>Hi</h1>
+            <h1>Hello </h1>
         </div>
     );
 }
