@@ -4,7 +4,10 @@
 - React JS Movie (2nd week, finshed)
 - Node JS (2nd week - trying)
 - Javascript ES6(Aug.2nd Week)
-- jQuery (Aug. 2nd week)
+- jQueryBasic (Aug. 2nd week~3ndWeek)
 - FundamentalReactNodejs(Aug 3th week-Aug 4th week)
 - Inidividual Portfolio Site (Aug 4th week -)
-- Nodejs (Sep 1st Week-)
+- Nodejs (Sep 1st Week-
+- ReactHooks(Sep 1st Week- 2nd Week)
+- Javascript Rework (Sept 3rd Week-))
+- Vellopert React (Sept 3rd Week-
